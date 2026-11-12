@@ -1,34 +1,34 @@
-# Resumo de produtos a partir de CSV
+# Product summaries from CSV files
 
-Exercício em Java que lê produtos de um arquivo CSV e escreve um resumo com o valor total de cada item.
+Java exercise that reads product records from a CSV file and writes a summary containing each item's total value.
 
-## Fluxo
+## Workflow
 
-1. Recebe o caminho do arquivo pelo terminal.
-2. Lê linhas no formato nome,preço,quantidade, sem cabeçalho.
-3. Calcula preço × quantidade.
-4. Gera um arquivo summary.csv na pasta out.
+1. Reads a file path from the terminal.
+2. Parses headerless rows in name,price,quantity format.
+3. Calculates price × quantity.
+4. Writes summary.csv to the out directory.
 
-## Exemplo de entrada
+## Sample input
 
 ```csv
 Teclado,120.00,2
 Mouse,60.00,3
 ```
 
-## Executar
+## Run locally
 
-Com um JDK instalado:
+With a JDK installed:
 
 ```bash
 javac -encoding UTF-8 -d classes src/application/Program.java src/entities/Product.java
 java -cp classes application.Program
 ```
 
-## Conceitos praticados
+## Concepts practiced
 
-Leitura e escrita de arquivos, try-with-resources, listas e modelagem de produtos.
+File input/output, try-with-resources, lists and product modeling.
 
-## Limitações conhecidas
+## Known limitations
 
-A montagem do caminho de saída usa separadores específicos do Windows. Em Linux/macOS, revise esse trecho antes de usar. O parser é simples e não trata campos CSV com vírgulas escapadas ou linhas inválidas.
+The output path uses Windows-specific separators. Review this code before running on Linux or macOS. The simple parser does not support escaped commas or malformed rows.
